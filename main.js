@@ -221,3 +221,8 @@ allMmealTypeBtn.onclick = () => {
     mealTypeBtns[i].classList.remove("active");
   }
 };
+
+let nowYear = new Date();
+let persentYear = document.getElementById("persentYear");
+
+persentYear.textContent = nowYear.getFullYear();

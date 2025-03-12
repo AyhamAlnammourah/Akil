@@ -9,7 +9,9 @@
   box-sizing: border-box;
   transition: all cubic-bezier(0.23, 1, 0.32, 1) 0.5s;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --color-v1: #82818a;
   --color-v2: #a2de96;
@@ -639,5 +641,10 @@ header #xmark {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  footer section .sec1,
+  .sec2 {
+    width: 100%;
+    text-align: center;
   }
 }

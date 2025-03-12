@@ -19,10 +19,10 @@
         الأكيل <img src="icons/fork-and-knife.svg" alt="" />
       </div>
       <ul id="navDesktop">
-        <li><a href="">الرئيسية</a></li>
-        <li><a href="">قائمة</a></li>
-        <li><a href="">احجز مقغدك</a></li>
-        <li><a href="">تواصل معنا</a></li>
+        <li><a href="#">الرئيسية</a></li>
+        <li><a href="#listOfFood">قائمة</a></li>
+        <li><a href="#timePre">احجز مقعدك</a></li>
+        <li><a href="#supportSection">تواصل معنا</a></li>
       </ul>
     </header>
     <div class="interface">
@@ -76,7 +76,7 @@
       </div>
     </div>
 
-    <div class="listOfFood">
+    <div class="listOfFood" id="listOfFood">
       <h1>قائمة الطعام</h1>
       <div class="headListOfFood">
         <button class="active" id="all">كل الوجبات</button>
@@ -96,7 +96,7 @@
       <div class="boxFood"></div>
     </div>
 
-    <section class="timePre">
+    <section class="timePre" id="timePre">
       <div class="baner">
         <img src="/images/reservation.png" alt="" />
         <form action="">
@@ -206,7 +206,7 @@
     </div>
 
     <footer>
-      <div class="supportSection">
+      <div class="supportSection" id="supportSection">
         <div class="info">
           <h1>خدمة العملاء</h1>
           <p>
@@ -258,7 +258,7 @@
           </ul>
         </div>
       </section>
-      <p class="endPage">Ayhwm &copy; 2025</p>
+      <p class="endPage">Ayhwm &copy; <span id="persentYear">year</span></p>
     </footer>
 
     <script src="main.js"></script>
