@@ -557,6 +557,9 @@ header #xmark {
     width: 100%;
     text-align: center;
   }
+  .listOfFood .headListOfFood {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 671px) {
@@ -589,8 +592,18 @@ header #xmark {
 
 @media (max-width: 420px) {
   header {
-    flex-direction: column;
-    padding: 20px 0;
+    padding: 20px 20px;
+  }
+
+  header .logo {
+    font-size: 27px;
+  }
+  header .logo img {
+    width: 15px;
+  }
+
+  header #bars {
+    font-size: 30px;
   }
 
   .supportSection .btn button {
@@ -609,5 +622,22 @@ header #xmark {
 
   .baner form input#submit {
     padding: 7px 20px;
+  }
+
+  .listOfFood .headListOfFood ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .listOfFood .headListOfFood ul li {
+    text-align: center;
+    width: 80%;
+  }
+  footer section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
