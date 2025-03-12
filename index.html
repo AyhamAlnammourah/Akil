@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>food</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        الأكيل <img src="icons/fork-and-knife.svg" alt="" />
+      </div>
+      <ul id="navDesktop">
+        <li><a href="">الرئيسية</a></li>
+        <li><a href="">قائمة</a></li>
+        <li><a href="">احجز مقغدك</a></li>
+        <li><a href="">تواصل معنا</a></li>
+      </ul>
+    </header>
+    <div class="interface">
+      <div class="continearTop">
+        <img src="images/dish.png" alt="" />
+        <div class="infoFace">
+          <h1>اشهى الوجبات</h1>
+          <h2>طعام صحي</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+            aspernatur voluptate cumque eligendi explicab
+          </p>
+          <button>قائمة الطعام</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="whyTo">
+      <h1>لماذا الأكيل هو الأفضل؟</h1>
+      <div class="whyBox">
+        <div class="whyItem">
+          <div class="img">
+            <img src="icons/adv-1-icon.svg" alt="" />
+          </div>
+          <h2>طعام صحي</h2>
+          <p>
+            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+            النص من مولد النص العربى، حيث يمكنك أن تولد مثل لنص
+          </p>
+        </div>
+        <div class="whyItem">
+          <div class="img">
+            <img src="icons/adv-2-icon.svg" alt="" />
+          </div>
+          <h2>وصفات مميزة</h2>
+          <p>
+            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+            النص من مولد النص العربى، حيث يمكنك أن تولد مثل لنص
+          </p>
+        </div>
+        <div class="whyItem">
+          <div class="img">
+            <img src="icons/adv-3-icon.svg" alt="" />
+          </div>
+          <h2>عروض حصرية</h2>
+          <p>
+            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+            النص من مولد النص العربى، حيث يمكنك أن تولد مثل لنص
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="listOfFood">
+      <h1>قائمة الطعام</h1>
+      <div class="headListOfFood">
+        <button class="active">كل الوجبات</button>
+        <ul>
+          <li onclick="contentMain(this.id)" id="breakfast" class="mealType">
+            الافطار
+          </li>
+          <li onclick="contentMain(this.id)" id="lunch" class="mealType">
+            الغداء
+          </li>
+          <li onclick="contentMain(this.id)" id="dinner" class="mealType">
+            العشاء
+          </li>
+        </ul>
+      </div>
+
+      <div class="boxFood"></div>
+    </div>
+
+    <section class="timePre">
+      <div class="baner">
+        <img src="/images/reservation.png" alt="" />
+        <form action="">
+          <h1>أحجز موعدك</h1>
+          <div class="input">
+            <label for="date"
+              >التاريخ<br /><input id="date" type="date"
+            /></label>
+            <label for="time">الوقت<br /><input id="time" type="time" /></label>
+            <label for="count"
+              >العدد<br /><select name="" id="count">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+              </select></label
+            >
+          </div>
+          <input id="submit" type="submit" value="احجز الان" />
+        </form>
+      </div>
+    </section>
+
+    <div class="reviw">
+      <h1>آراء عملاء الأكيل</h1>
+      <div class="boxReviw">
+        <!--  -->
+        <div class="item">
+          <div class="head">
+            <img src="images/user3.png" alt="" />
+            <div class="title">
+              <h3>سارة احمد</h3>
+              <span>عميل مميز</span>
+            </div>
+          </div>
+          <p>
+            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+            النص من مولد النص العربى، حيث يمكنك أن تولد مثل لنص هذا النص هو مثال
+            لنص يمكن أن يستبدل في نفس المساحة.
+          </p>
+          <div class="star">
+            <img src="icons/star.svg" alt="" />
+            <img src="icons/star.svg" alt="" />
+            <img src="icons/star.svg" alt="" />
+            <img src="icons/star.svg" alt="" />
+            <img src="icons/star.svg" alt="" />
+          </div>
+        </div>
+        <!--  -->
+        <!--  -->
+        <div class="item">
+          <div class="head">
+            <img src="images/user2.png" alt="" />
+            <div class="title">
+              <h3>أحمد جمال</h3>
+              <span>عميل مميز</span>
+            </div>
+          </div>
+          <p>
+            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+            النص من مولد النص العربى، حيث يمكنك أن تولد مثل لنص هذا النص هو مثال
+            لنص يمكن أن يستبدل في نفس المساحة.
+          </p>
+          <div class="star">
+            <img src="icons/star.svg" alt="" />
+            <img src="icons/star.svg" alt="" />
+            <img src="icons/star.svg" alt="" />
+            <img src="icons/star.svg" alt="" />
+            <img src="icons/star.svg" alt="" />
+          </div>
+        </div>
+        <!--  -->
+        <!--  -->
+        <div class="item">
+          <div class="head">
+            <img src="images/user1.png" alt="" />
+            <div class="title">
+              <h3>علي علاء</h3>
+              <span>عميل مميز</span>
+            </div>
+          </div>
+          <p>
+            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+            النص من مولد النص العربى، حيث يمكنك أن تولد مثل لنص هذا النص هو مثال
+            لنص يمكن أن يستبدل في نفس المساحة.
+          </p>
+          <div class="star">
+            <img src="icons/star.svg" alt="" />
+            <img src="icons/star.svg" alt="" />
+            <img src="icons/star.svg" alt="" />
+            <img src="icons/star.svg" alt="" />
+            <img src="icons/star.svg" alt="" />
+          </div>
+        </div>
+        <!--  -->
+      </div>
+
+      <div class="transaction">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <footer>
+      <div class="supportSection">
+        <div class="info">
+          <h1>خدمة العملاء</h1>
+          <p>
+            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا
+            النص من مولد النص العربى، حيث يمكنك أن تولد مثل لنص
+          </p>
+        </div>
+        <div class="btn">
+          <button>تواصل معنا</button>
+        </div>
+      </div>
+
+      <section>
+        <div class="sec1">
+          <div class="logo">
+            الأكيل <img src="icons/fork-and-knife.svg" alt="" />
+          </div>
+          <img src="icons/instagram.svg" alt="" />
+          <img src="icons/twitter.svg" alt="" />
+          <img src="icons/facebook.svg" alt="" />
+        </div>
+
+        <div class="sec2">
+          <h3>الخدمات</h3>
+          <ul>
+            <li>حجز طاولة</li>
+            <li>خدمة العملاء</li>
+            <li>المنتجات</li>
+            <li>قائمة الطعام</li>
+          </ul>
+        </div>
+
+        <div class="sec2">
+          <h3>الشركة</h3>
+          <ul>
+            <li>الوظائف</li>
+            <li>شهادات الجودة</li>
+            <li>المشاركة الاجتماعية</li>
+            <li>عن الشركة</li>
+          </ul>
+        </div>
+
+        <div class="sec2">
+          <h3>الروابط</h3>
+          <ul>
+            <li>عن الشركة</li>
+            <li>المنتجات</li>
+            <li>سياسة الاستخدام</li>
+          </ul>
+        </div>
+      </section>
+      <p class="endPage">Ayhwm &copy; 2025</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
