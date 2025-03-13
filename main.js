@@ -10,12 +10,14 @@ navMobile.classList.add("menu");
 navMobile.appendChild(navUl);
 header.appendChild(navMobile);
 
+window.addEventListener("resize", function () {
+  if (window.innerWidth >= 1000) navMobile.style.display = "none";
+});
+
 window.addEventListener("scroll", () => {
-  if (scrollY > 70) {
-    header.classList.add("scrolling");
-  } else {
-    header.classList.remove("scrolling");
-  }
+  scrollY > 70
+    ? header.classList.add("scrolling")
+    : header.classList.remove("scrolling");
 });
 
 //addEvent
@@ -176,7 +178,7 @@ let arrayOfFood = [
 function renderFoodItem(food) {
   return `
       <div class="Food">
-          <img src="${food.imageFood}" alt="${food.nameOfFood}" />
+          <img loading="lazy" src="${food.imageFood}" alt="${food.nameOfFood}" />
           <div class="info">
               <p>${food.nameOfFood}</p>
               <span>جم ${food.weightOfFood}</span>
