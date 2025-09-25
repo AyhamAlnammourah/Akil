@@ -1,40 +1,50 @@
-let header = document.querySelector("header");
-let navDesktop = document.getElementById("navDesktop");
-let navMobile = document.createElement("div");
-let navUl = document.createElement("ul");
+let header = document.querySelector("header"); // تحديد عنصر الهيدر
+let navDesktop = document.getElementById("navDesktop"); // قائمة التنقل الخاصة بالديسكتوب
+let navMobile = document.createElement("div"); // إنشاء عنصر جديد للقائمة الخاصة بالموبايل
+let navUl = document.createElement("ul"); // إنشاء قائمة غير مرتبة
 
+// نسخ عناصر القائمة من الـ desktop + زر X للإغلاق
 navUl.innerHTML =
   navDesktop.innerHTML + `<i id="xmark" class="fa-solid fa-xmark"></i>`;
+
+// إضافة أيقونة "bars" (☰) لفتح القائمة في الموبايل
 header.innerHTML += `<span><i id="bars" class="fa-solid fa-bars"></i></span>`;
+
+// إضافة class "menu" للقائمة الموبايل + إلحاقها بالهيدر
 navMobile.classList.add("menu");
 navMobile.appendChild(navUl);
 header.appendChild(navMobile);
 
+// إخفاء القائمة عند تكبير الشاشة (أكثر من 1000px)
 window.addEventListener("resize", function () {
   if (window.innerWidth >= 1000) navMobile.style.display = "none";
 });
 
+// عند التمرير للأسفل أكثر من 70px، نضيف كلاس "scrolling" للهيدر
 window.addEventListener("scroll", () => {
   scrollY > 70
     ? header.classList.add("scrolling")
     : header.classList.remove("scrolling");
 });
 
-//addEvent
-
+// التعامل مع أيقونة bars (فتح القائمة الموبايل)
 let bars = document.getElementById("bars");
 bars.addEventListener("click", () => {
   navMobile.style.display = "block";
 });
 
+// التعامل مع أيقونة xmark (إغلاق القائمة الموبايل)
 let xmark = document.getElementById("xmark");
 xmark.addEventListener("click", () => {
   navMobile.style.display = "none";
 });
 
+// اختيار صندوق الأكل + أزرار أنواع الوجبات
 let boxFood = document.querySelector(".boxFood");
 let mealTypeBtns = document.querySelectorAll(".mealType");
 let allMmealTypeBtn = document.getElementById("all");
+
+// مصفوفة تحتوي على جميع الأكلات (اسم، وزن، صورة، نوع الوجبة)
 let arrayOfFood = [
   // breakfast
   {
@@ -175,6 +185,7 @@ let arrayOfFood = [
   },
 ];
 
+// دالة لإرجاع عنصر HTML جاهز لعرض الأكلة
 function renderFoodItem(food) {
   return `
       <div class="Food">
@@ -188,16 +199,19 @@ function renderFoodItem(food) {
     `;
 }
 
+// إضافة كلاس "active" عند الضغط على أي زر نوع وجبة
 mealTypeBtns.forEach((el) => {
   el.addEventListener("click", () => {
     el.classList.add("active");
   });
 });
 
+// عرض جميع الأكلات بشكل افتراضي عند تحميل الصفحة
 arrayOfFood.forEach((element) => {
   boxFood.innerHTML += renderFoodItem(element);
 });
 
+// دالة لتصفية الأكلات حسب نوع الوجبة
 function contentMain(typeOfFood) {
   boxFood.innerHTML = "";
   arrayOfFood.forEach((element) => {
@@ -206,12 +220,14 @@ function contentMain(typeOfFood) {
     }
   });
 
+  // إزالة التحديد من جميع الأزرار
   for (let i = 0; i < mealTypeBtns.length; i++) {
     mealTypeBtns[i].classList.remove("active");
   }
   allMmealTypeBtn.classList.remove("active");
 }
 
+// عند الضغط على زر "الكل" يتم عرض جميع الأكلات
 allMmealTypeBtn.onclick = () => {
   boxFood.innerHTML = "";
   allMmealTypeBtn.classList.add("active");
@@ -219,12 +235,13 @@ allMmealTypeBtn.onclick = () => {
     boxFood.innerHTML += renderFoodItem(element);
   });
 
+  // إزالة الـ active من بقية الأزرار
   for (let i = 0; i < mealTypeBtns.length; i++) {
     mealTypeBtns[i].classList.remove("active");
   }
 };
 
+// إضافة السنة الحالية في الفوتر
 let nowYear = new Date();
 let persentYear = document.getElementById("persentYear");
-
 persentYear.textContent = nowYear.getFullYear();
